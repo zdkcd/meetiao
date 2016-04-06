@@ -1,0 +1,36 @@
+<%= render file:'public/templetes/meetiao/_header.html'%>
+
+<header class="padding-top container text-right">
+	<div class="col-md-8 h3">
+		案例：<strong><%= @page.title %></div></strong>
+
+</header>
+<!--End header -->
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-9 col-md-12">
+			<hr/>
+			<p> <strong>摘要：</strong><%= @page.description %>
+			</p>
+			<hr/>
+			<p> <strong>发布时间:</strong>
+				<%= @page.created_at.year %>
+				年
+				<%= @page.created_at.month %>
+				月
+				<%= @page.created_at.day %>
+				日
+				<br><br>
+				<strong>关键词:</strong>
+				<%= @page.keywords.length< 1 ? "无" : @page.keywords%></p>
+			
+			<hr/>
+			<%=raw @page.content %></div>
+		<div class="col-lg-3 col-md-12">
+			<%= render file:'public/templetes/meetiao/_slider.html'%></div>
+	</div>
+
+</div>
+
+<%= render file:'public/templetes/meetiao/_footer.html'%>

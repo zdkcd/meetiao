@@ -1,0 +1,41 @@
+*{
+	margin: 0;
+	padding: 0;
+	/*font-family:"楷体"*/
+}
+body{overflow: hidden;}
+.public{position: relative;min-height: 400px;min-width: 250px;background-size: 100%;background-repeat: no-repeat;}
+/*右侧*/
+.fixed{
+	position: fixed;
+	width: 48%;
+	height: 90%;
+	top:6%;
+	left:5%;
+	
+	z-index: 10;
+
+}
+.fi_img1{position: fixed;left: 75px;top:25px;width: 50px;height: 50px;}
+.fixed2{position: fixed;top: 0;left: -55%;padding: 20px 20px;background: rgba(0,0,0,0.5);width: 50% ;height: 100%;z-index: 12}
+.fi_img2:hover{cursor: pointer;}
+.fi_img1:hover{cursor: pointer;}
+.fi_le_ul{list-style-type: none;margin: 0 auto;text-align: center;color: #fff;font-size: 20px;line-height: 55px;padding-top: 40%;background: rgba(0,0,0,0.9);}
+.fi_le_ul li p{display: inline-block;}
+
+.fi_le_ul li p:hover{background: #4de878;height: 50px;width: 110px;cursor: pointer;}
+.man1{transition:transform 1s;}
+/*板块1*/
+.main_1{background: url('/templetes/frist/img/main1.jpg');}
+.main_text{opacity: 0;color: #fff;width: 200px;position: absolute;z-index: 50;left: 35%;top: 50%;z-index: 11}
+.main_text h1{margin-bottom: 60px;}
+.main_text p{font-size: 14px;line-height: 20px;}
+/*板块2*/
+.main_2{background: url('/templetes/frist/img/main2.jpg');}
+/*板块3*/
+.main_3{background: url("/templetes/frist/img/back1.jpg");}
+.main_3 img{position: absolute;left: 0;top: 0;width: 100%;height: 100%}
+.main_3 .a3_2{transition:transform 1s;}
+/*板块4*/
+.main_4{background: url('/templetes/frist/img/main4_1.jpg');}
+.ma_img{background: url('/templetes/frist/img/main4_2.png');background-size: 100%;width: 100%;height: 100%;z-index:5}

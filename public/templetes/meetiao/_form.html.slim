@@ -1,0 +1,15 @@
+div.container
+  = simple_form_for @comments  do |f|
+    table#simple-table.table.table-striped.table-bordered.table-hover
+      tbody
+        tr
+          td 名称
+          td= f.input :name, align: "left", label: false, input_html: { class: 'input-text' }
+        tr
+          td 电话
+          td= f.input :mobile_phone, align: "left", label: false, input_html: { class: 'input-text' }
+        tr
+          td 内容
+          td= f.input :content, label: false, type: 'number', input_html: { class: 'input-text' }
+        tr
+          td= f.submit 'SUMBIT', class: 'btn btn-danger btn-xs'

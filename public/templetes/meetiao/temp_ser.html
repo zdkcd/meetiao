@@ -1,0 +1,45 @@
+<%= render file: 'public/templetes/meetiao/_header.html' %>
+
+<section  class="white-bg padding-top-bottom">
+	<div class="container">
+		<h1 class="section-title">服务</h1>
+		<p class="section-description">
+						专业的互联网服务解决方案提供商和网络营销服务专家
+						<br/>		
+						为客户提供一体化的互联网全网营销解决方案
+					</p>
+		<div class="row services">
+		<% y=[];y1=[];y2=[];Admin::Page.where("`channel_id`='2'").all.each do |m|%>
+		<% y.push(m.title);y1.push(m.description);y2.push(get_url(m))%>
+		<% end %>
+		<%
+			x1=["comments","globe","edit","desktop","cog","coffee","wrench","magic"];#图标
+			x=["fade-left d2","fade-left ","fade-right  d2","fade-right"];
+		%>
+		<% i=i1=i2=0;while i2 <= (y.length) / 4.ceil %>
+				<div class="row">
+				<% 4.times do %>
+				<% if y[i1]==nil ;break;end%>
+					<div class="col-sm-3 item text-center scrollimation <%= x[i] %>" >
+						<div class="icon"> <i class="fa fa-<%=x1[i1]%>"></i>
+						</div>
+						<h3>
+							<a href="<%= y2[i1] %>
+								">
+								<%= y[i1] %></a>
+						</h3>
+						<p title="<%=y1[i1]%>">
+							<%=y1[i1].truncate(30)%></p>
+					</div>
+				<% i==3 ? i=0 : i=i+1;i1=i1+1;end %>
+				</div>
+			<% i2=i2+1; end %>
+
+		</div>
+			<hr>
+	
+	</div>
+<script type="text/javascript" src="/templetes/meetiao/js/te.js"></script>
+</section>
+
+<%= render file: 'public/templetes/meetiao/_footer.html' %>

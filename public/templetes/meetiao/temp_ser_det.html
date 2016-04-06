@@ -1,0 +1,22 @@
+<%= render file:'public/templetes/meetiao/_header.html'%>
+	
+
+	<section id="services" class="white-bg padding-top-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<P><h2><strong><%= @page.title %></strong></h2></P>
+					<hr/>
+					
+					<%=raw @page.content %>
+				</div>
+				<div class="col-lg-4">
+					<%= render file:'public/templetes/meetiao/_slider.html'%>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+
+<%= render file:'public/templetes/meetiao/_footer.html'%>

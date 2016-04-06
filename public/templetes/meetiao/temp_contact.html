@@ -1,0 +1,118 @@
+<%= render file: 'public/templetes/meetiao/_header.html' %>
+<section class="gray-bg padding-top-bottom">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-sm-4 text-center contact-item scrollimation fade-right">
+
+				<a class="icon" href="http://map.baidu.com/" target="_blank"> <i class="fa fa-map-marker fa-fw"></i>
+				</a>
+				<h2>地址</h2>
+				<p>
+					<%= Admin::Keystore.all.where("`key`='address'")[0].value%></p>
+
+			</div>
+
+			<div class="col-sm-4 text-center contact-item scrollimation fade-up">
+
+				<a class="icon" href="mailto:<%= a=Admin::Keystore.all.where("`key`='contact_email'")[0].value%>
+					"> <i class="fa fa-envelope fa-fw"></i>
+				</a>
+				<h2>邮箱</h2>
+				<p>
+					<%= a%></p>
+
+			</div>
+
+			<div class="col-sm-4 text-center contact-item scrollimation fade-left">
+
+				<a class="icon" href="#link" >
+					<i class="fa fa-phone fa-fw" data-toggle="tooltip" data-placement="right" title="联系......"></i>
+				</a>
+				<h2>联系我们</h2>
+				<p>
+					<%= Admin::Keystore.all.where("`key`='contact_mobile'")[0].value%></p>
+					
+			</div>
+
+		</div>
+		<h1 class="subsection-title">给我们留言</h1>
+		<p class="subsection-description">输入一些必要的信息，方便我们回复您</p>
+
+		<div class="row">
+
+
+<% #content_for :comment do %>
+  <%#=render file:"comments/_form.html.slim"%>
+<%# end %>
+
+<%# if File.exist?( @base_dir + 'temp_comment.html' )%>
+  <%#= render file: @base_dir + 'temp_comment.html' %>
+<% #else %>
+  <!-- <h2 class="error">没有找到搜索模版文件！</h2> -->
+<% #end %>
+
+
+
+			<!--=== Contact Form ===-->
+			<%= simple_form_for(@comment, html: {  class: 'col-sm-6 col-sm-offset-3 footer-subsribe', id: "contact-form" } ) do |f| %>
+			<!-- <form id="contact-form" class="col-sm-6 col-sm-offset-3" action="/comments" method="post" novalidate="novalidate" accept-charset="UTF-8"> -->
+				<div id="mes" style="color:red" class="text-center">
+			<% flash.each do |key,value|%>
+				<%= key%>&nbsp;
+				<%= value%>
+			<% end %></div>
+						<div class="form-group">
+						  <label class="control-label" for="contact-name">姓名</label>
+						  <div class="controls">
+							<input id="contact-name" name="comment[name]" placeholder="请输入您的姓名！" class="form-control requiredField label_better" type="text" data-error-empty="请输入你的姓名！">
+							<i class="fa fa-user"></i>
+						  </div>
+						</div><!-- End name input -->
+						
+						<div class="form-group">
+						  <label class="control-label" for="contact-mail">电话</label>
+						  <div class=" controls">
+							<input id="contact-mail" name="comment[mobile_phone]" placeholder="请输入你的电话！" class="form-control requiredField label_better" type="phone" data-error-empty="请输入你的电话！" data-error-invalid="输入电话错误！">
+							<i class="fa fa-envelope"></i>
+						  </div>
+						</div><!-- End email input -->
+						
+						<div class="form-group">
+						  <label class="control-label" for="contact-message">信息</label>
+							<div class="controls">
+								<textarea id="contact-message" name="comment[content]"  placeholder="请输入信息！" class="form-control requiredField label_better" rows="6" data-error-empty="请输入信息！"></textarea>
+								<i class="fa fa-comment"></i>
+							</div>
+						</div><!-- End textarea -->
+					
+						<p><button name="submit" type="submit" class="btn btn-qubico btn-block" data-error-message="错误!" data-sending-message="提交中..." data-ok-message="提交成功"><i class="fa fa-location-arrow"></i>提交</button></p>
+						<input type="hidden" name="submitted" id="submitted" value="true" />
+					<!-- </form> -->
+					<!-- End contact-form -->
+			<% end%>
+			<!-- End contact-form -->
+
+		</div>
+		
+		<script type="text/javascript">
+		$(function(){
+			// var mes=$("#mes").hide().find("p").eq(1).text();
+			// if(mes!=null&&mes!=""){
+			// 	if(mes=="提交成功"){
+			// 		var s=confirm(mes+"是否跳转到首页");
+			// 		//s==falsh？localtion.href="home":null;
+			// 	}else{
+			// 		alert(mes);
+			// 	}
+			// }
+			$("form").removeClass("form-horizontal");
+		})
+		</script>
+	</div>
+
+</section>
+
+<%= render file: 'public/templetes/meetiao/_footer.html' %>

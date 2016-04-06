@@ -1,0 +1,57 @@
+<%= render file: 'public/templetes/meetiao/_header.html' %>
+
+<!-- ==============================================
+		NEWS
+		=============================================== -->
+
+<section id="news" class="white-bg padding-top-bottom">
+
+	<div class="container">
+
+		<h1 class="section-title">
+			<%= @channel.title%></h1>
+		<p class="section-description">
+			<%= @channel.description%></p>
+
+		<div class="timeline">
+			<div class='row'>
+				<% i=0;Admin::Page.where("`channel_id`='4'").recent(4).each do |s|%>
+				<div class="col-sm-6 news-item  <%= i%2==	0 ?  nil : 'right' %>
+					scrollimation fade-up">
+					<div class="news-content">
+
+						<div class="date">
+							<p>
+								<%=s.updated_at.day%></p>
+							<small>
+								<%= s.updated_at.month%>月</small>
+						</div>
+
+						<h2 class="news-title">
+							<%= s.title%></h2>
+
+						<div class="news-media">
+							<a class="colorbox" href="/templetes/meetiao/assets/blog/bicycle_ride.jpg">
+								<img class="img-responsive" src="/templetes/meetiao/assets/blog/bicycle_ride_thumb.jpg" alt="" />
+							</a>
+						</div>
+
+						<p>
+							<%= s.description%>&hellip;</p>
+
+						<a class="read-more" href="<%= get_url(s) %>">点击详情</a>
+
+					</div>
+				</div>
+				<% i+=1;end %></div>
+
+		</div>
+
+		<!--加载按钮 <p class="text-center">
+		<a class="btn btn-qubico" href="blog/blog.html">Read our Blog</a>
+	</p>
+	-->
+</div>
+
+</section>
+<%= render file: 'public/templetes/meetiao/_footer.html' %>

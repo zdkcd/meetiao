@@ -1,0 +1,58 @@
+<%= render file: 'public/templetes/meetiao/_header.html' %>
+
+<!-- ==============================================
+		NEWS
+		=============================================== -->
+
+<section  class="white-bg padding-top-bottom">
+
+	<div class="container">
+
+		<h1 class="section-title">
+			<%=@channel.title%></h1>
+		<p class="section-description">news</p>
+
+		<div class="timeline">
+			<% x=[];x1=[];x2=[];x3=[]%>
+			<%@channel.pages.recent(4).each do |s1|%>
+			<!-- 显示的新闻数目 -->
+				<% x.push(s1.updated_at);%>
+				<% x1.push(s1.title);%>
+				<% x2.push(s1.description);%>
+				<% x3.push(get_url(s1));%>
+			<%end%>
+				<% m=0;i=x.length;i%2==0 ? i=i : i=i+1 ; (i/2).times do %>				
+					<div class='row'>
+						<% 2.times do%>
+							<div class="col-sm-6 news-item  <%= m%2==0 ?  "left" : 'right' %> scrollimation fade-up">
+								<div class="news-content">
+									<div class="date">
+										<a class="colorbox" href="/templetes/meetiao/assets/blog/bicycle_ride.jpg">
+											<img class="img-responsive" src="/templetes/meetiao/assets/blog/bicycle_ride_thumb.jpg" alt="" />
+										</a>
+									</div>
+
+									<h2 class="news-title">
+										<%= x1[m]%></h2>
+									<div class="news-media">
+										
+									</div>
+									<p>
+										<%= x2[m]%>&hellip;</p>
+
+									<a class="read-more" href="<%= x3[m]%>">点击详情</a>&nbsp;<span style="font-size:12px"><%=x[m]%></span>
+
+								</div>
+							</div>
+						<% m=m+1 ;m>=x.length ? break : nil; end %>
+				</div>
+				<%end%>
+		</div>
+		<p class="text-center">
+			<a class="btn btn-qubico" href="#" title="点击显示更多">MORE</a>
+		</p>
+		<!-- 每一列显示固定数目新闻列；点击加载下一页新闻列表 -->
+	</div>
+
+</section>
+<%= render file: 'public/templetes/meetiao/_footer.html' %>

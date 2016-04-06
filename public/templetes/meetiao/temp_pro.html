@@ -1,0 +1,50 @@
+<%= render file:'public/templetes/meetiao/_header.html'%>
+<section  class="poro white-bg padding-top-bottom">
+	<div class="container poro_1">
+		<h1 class="section-title">
+			<%= @channel.title %></h1>
+		<p class="section-description">
+			<%= raw @channel.content %></p>
+		<!--==== Portfolio Filters ====-->
+		<div class="projects-container scrollimation">
+			<div class="row">
+				<!-- ==============================================
+				SINGLE PROJECT ITEM
+				=============================================== -->
+				<% @channel.pages.each do |p| %>
+				<article class="col-md-4 col-sm-6 project-item web-design apps psd">
+					<!--==== Project Thumbnail & Title ====-->
+					<div class="project-thumb">
+						<a href="<%= get_url(p) %>
+							" >
+							<img class="img-responsive img-center" src="<%= p.image_path %>
+							" alt=""/>
+							<h2 class="project-title">
+								<%= p.title %></h2>
+							<span class="overlay-mask"></span>
+						</a>
+						<a class="enlarge" href="<%= p.image_path %>" title="<%= p.title %>"> <i class="fa fa-expand fa-fw"></i>
+						</a>
+						<p class="text-center"><%= p.title %></p>
+						<a class="link" href="<%= get_url(p)%>"> <i class="fa fa-eye fa-fw"></i>
+						</a>
+					</div>
+					<!-- End Thumbnail -->
+					<!--==== Project Preview Content ====-->
+				</article>
+				<% end %>
+				
+			</div>
+		</div>
+		<!-- End Projects Container -->
+
+		<p class="text-center">
+			<a id="ajax-load" class="btn btn-qubico" href="#">
+				<i class="fa fa-plus-circle"></i>
+				加载更多展示
+			</a>
+		</p>
+	</div>
+	<!-- End container -->
+</section>
+<%= render file:'public/templetes/meetiao/_footer.html'%>

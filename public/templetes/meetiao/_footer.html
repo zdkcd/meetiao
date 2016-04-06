@@ -1,0 +1,56 @@
+
+ 		<!-- ==============================================
+		FOOTER
+		=============================================== --> 		
+ 		<footer id="main-footer" class="color-bg light-typo">
+
+ 			<div class=" row ">
+ 				<div class="col-md-4 text-center">
+ 					<img src="\templetes\meetiao\assets\er.jpg" style="display:inline; height:100px;width:100px" class="img-responsive">
+ 				</div>
+ 				<div class="col-md-4 text-center">
+ 					<ul class="social-links">
+ 						<li>
+ 							<a href="#link"> <i class="fa fa-twitter fa-fw"></i>
+ 							</a>
+ 						</li>
+ 						<li>
+ 							<a href="#link"> <i class="fa fa-facebook fa-fw"></i>
+ 							</a>
+ 						</li>
+ 						<li>
+ 							<a href="#link">
+ 								<i class="fa fa-google-plus fa-fw"></i>
+ 							</a>
+ 						</li>
+ 						<li>
+ 							<a href="#link">
+ 								<i class="fa fa-dribbble fa-fw"></i>
+ 							</a>
+ 						</li>
+ 						<li>
+ 							<a href="#link">
+ 								<i class="fa fa-linkedin fa-fw"></i>
+ 							</a>
+ 						</li>
+ 					</ul>
+ 					<p>
+ 						&copy;2014
+ 						<a href="/home" target="_blank"><%= Admin::Keystore.all.where("`key`='site_name'")[0].value%></a>
+ 						|
+ 						<a href="http://www.miibeian.gov.cn/"><%= Admin::Keystore.all.where("`key`='record_number'")[0].value%></a>
+ 					</p>
+ 				</div>
+ 				<div class="col-md-4 text-right">
+ 					
+ 						<p class="text-center">
+ 							<a class="btn btn-qubico white" href="/contact">
+ 								<i class="fa fa-phone"></i>
+ 								联系我们
+ 							</a>
+ 						</p>
+ 					
+ 				</div>
+ 			</div>
+
+ 		</footer>

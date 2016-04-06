@@ -1,0 +1,267 @@
+
+		
+		<%= render file: 'public/templetes/meetiao/_header.html' %>		
+
+		<!-- ==============================================
+		HEADER
+		=============================================== -->		
+		<header id="home" class="jumbotron">
+
+			<div id="sequence-theme">
+
+				<div id="sequence" class="perspective multilayer">
+
+					<ul class="controls">
+						<li class="sequence-prev"> <i class="fa fa-angle-left fa-fw"></i>
+						</li>
+						<li class="sequence-next"> <i class="fa fa-angle-right fa-fw"></i>
+						</li>
+					</ul>
+
+					<ul class="sequence-canvas container">
+						<li>
+							<div class="message slow">
+								<h2 class="title">专业网站建设</h2>
+								<p>
+									专注网站建设,为您提供业界领先的网站制作,网站设计,由资深设计师,专业架构师,经验丰富的开发团队,完善的售后服务全程为您护航......
+								</p>
+							</div>
+							<div class="perspective-view">
+								<div class="single-image in-from-top-z fast">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide1-layer1.png" alt="" />		
+								</div>
+								<div class="single-image in-from-top-z fast delay1">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide1-layer2.png" alt="" />		
+								</div>
+								<div class="single-image in-from-top-z fast delay2">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide1-layer3.png" alt="" />		
+								</div>
+								<div class="single-image in-from-top-z fast delay3">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide1-layer4.png" alt="" />		
+								</div>
+								<div class="single-image in-from-top-z fast delay4">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide1-layer5.png" alt="" />		
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="message slow">
+								<h2 class="title in-from-top slow">APP开发及应用软件开发</h2>
+								<p class="in-from-bottom slow delay1">......</p>
+							</div>
+							<div class="perspective-view">
+								<div class="image-top in-from-top-z fast">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide2-layer1.png" alt="" />		
+								</div>
+								<div class="image-top in-from-top-z fast delay1">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide2-layer2.png" alt="" />		
+								</div>
+								<div class="image-top in-from-top-z fast delay2">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide2-layer3.png" alt="" />		
+								</div>
+								<div class="image-bottom in-from-top-z fast delay3">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide2-layer4.png" alt="" />		
+								</div>
+								<div class="image-bottom in-from-top-z slow delay4">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide2-layer5.png" alt="" />		
+								</div>
+								<div class="image-bottom in-from-top-z fast delay4">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide2-layer6.png" alt="" />		
+								</div>
+								<div class="image-bottom in-from-top-z fast delay5">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide2-layer7.png" alt="" />		
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="message slow">
+								<h2 class="title in-from-left slow">SEO优化</h2>
+								<p class="in-from-left slow delay1">网站内部调整优化及站外优化，网站满足搜索引擎收录排名需求，在搜索引擎中提高关键词排名，从而把精准用户带到网站</p>
+							</div>
+							<div class="perspective-view">
+								<div class="image-right in-from-top-z fast delay1">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide3-layer1.png" alt="" />		
+								</div>
+								<div class="image-right in-from-top-z fast delay3">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide3-layer2.png" alt="" />		
+								</div>
+								<div class="image-right in-from-top-z fast delay4">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide3-layer3.png" alt="" />		
+								</div>
+								<div class="image-right in-from-top-z fast delay5">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide3-layer4.png" alt="" />		
+								</div>
+								<div class="image-left in-from-top-z fast">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide3-layer5.png" alt="" />		
+								</div>
+								<div class="image-left in-from-top-z fast delay2">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide3-layer6.png" alt="" />		
+								</div>
+								<div class="image-left in-from-top-z fast delay4">
+									<img class="img-responsive" src="/templetes/meetiao/assets/slider/perspective/slide3-layer7.png" alt="" />		
+								</div>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+
+			</div>
+		</header>
+		<!--End header -->		
+
+		<!-- ==============================================
+		SERVICES
+		=============================================== -->		
+		<section id="services" class="white-bg padding-top-bottom">
+
+			<div class="container">
+
+				<h1 class="section-title">解决方案</h1>
+				<p class="section-description">
+					专业的互联网服务解决方案提供商和网络营销服务专家
+					<br/>		
+					为客户提供一体化的互联网全网营销解决方案
+				</p>
+				<div class="row services">
+
+					<% x1=["comments","globe","edit","desktop"];x=["fade-right d2","fade-right","fade-left","fade-left d2"];i=0;Admin::Page.all.each do |pa|%>		
+					<div class="col-sm-4 item text-center scrollimation <%=x[i]%>
+						">
+						<div class="icon moveto">
+							<i class="fa fa-<%=x1[i]%>"></i>
+						</div>
+						<h3>
+							<a href="<%= get_url(pa)%>
+								" class="movetourl">
+								<%=pa.title%></a>
+						</h3>
+						<p title="<%= pa.description%>
+							">
+							<%= pa.description.truncate(50)%></p>
+					</div>
+					<% i=i+1 ; if pa !=nil && i>		
+					2 %>
+					<% break ;end%>		
+					<%  end %></div>
+				
+				<p class="text-center">
+					
+					<a class="btn btn-qubico" href="/services">
+						<i class="fa fa-plus-circle"></i>
+						了解更多
+					</a>
+					</p>
+			</div>
+
+		</section>
+
+		<!-- ==============================================
+		PORTFOLIO
+		=============================================== -->		
+		<section id="portfolio" class="gray-bg padding-top-bottom poro" >
+			<div class="container">
+				<h1 class="section-title">案例</h1>
+				<p class="section-description">这是一句话</p>
+				<div class="projects-container scrollimation">
+					<div class="row poro_1">
+						<% i=0;Admin::Page.where("`channel_id`='3'").each do |por|%>		
+						<article class="col-md-4 col-sm-6 project-item web-design apps psd">
+							<div class="project-thumb">
+								<a href="#" class="main-link">
+									<img class="img-responsive img-center" src="<%= por.image_path%>" alt="<%=por.description%>" />
+									<h2 class="project-title">
+										<%=por.title%></h2>
+									<span class="overlay-mask"></span>
+								</a>
+								<a class="enlarge" href="<%= por.image_path%>" title="<%=por.title%>">
+									<i class="fa fa-expand fa-fw"></i>
+								</a>
+								<a class="link" href="<%=get_url(por)%>">
+									<i class="fa fa-eye fa-fw"></i>
+								</a>
+							</div>
+						</article>
+						<% i+=1;if i>2 ;break end ;end%></div>
+					<!-- End Row -->		
+				</div>
+				<!-- End Projects Container -->		
+
+				<p class="text-center">
+					<% Admin::Channel.where("`id`='3'").all.each do |ur|%>		
+					<a class="btn btn-qubico" href="<%= get_url(ur)%>">
+						<i class="fa fa-plus-circle"></i>
+						更多案例
+					</a>
+					<%end%></p>
+
+			</div>
+			<!-- End container -->		
+
+			<!--End #project-preview panel-->		
+
+		</section>
+
+		<!-- ==============================================
+		NEWS
+		=============================================== -->		
+
+		<section id="news" class="white-bg padding-top-bottom">
+
+			<div class="container">
+				<h1 class="section-title">
+					<%=Admin::Channel.where("`short_title`='news'")[0].title%></h1>
+				<p class="section-description">这是一段简要</p>
+
+				<div class="timeline">
+
+					<div class="date-title">
+						<span>最新资讯</span>
+					</div>
+					<% x=[];x1=[];x2=[];x3=[]%>		
+					<%Admin::Page.where("`channel_id`='4'").recent(2).each do |s1|%>		
+					<% x.push(s1.updated_at);%>		
+					<% x1.push(s1.title);%>		
+					<% x2.push(s1.description);%>		
+					<% x3.push(get_url(s1));%>		
+					<%end%>		
+					<% m=0;i=x.length;i%2==0 ? i=i : i=i+1 ; (i/2).times do %>		
+		
+					<div class='row'>
+						<% 2.times do%>
+						<div class="col-sm-6 news-item  <%= m%2==0 ?  "left" : 'right' %>
+							scrollimation fade-up">
+							<div class="news-content">
+								<div class="date">
+									<a class="colorbox" href="/templetes/meetiao/assets/blog/bicycle_ride.jpg">
+										<img class="img-responsive" src="/templetes/meetiao/assets/blog/bicycle_ride_thumb.jpg" alt="" />		
+									</a>
+								</div>
+
+								<h2 class="news-title">
+									<%= x1[m]%></h2>
+								<div class="news-media"></div>
+								<p>
+									<%= x2[m]%>&hellip;</p>
+
+								<a class="read-more" href="<%= x3[m]%>">点击详情</a>
+								&nbsp;
+								<span style="font-size:12px">
+									<%=x[m]%></span>
+
+							</div>
+						</div>
+						<% m=m+1 ;m>=x.length ? break: nil;end %></div>
+					<%end%></div>
+
+				<p class="text-center">
+					<a class="btn btn-qubico" href="<%=Admin::Channel.where("`short_title`='news'")[0].short_title%>" title="点击-更多资讯"><i class="fa fa-plus-circle"></i>更多资讯</a>
+				</p>
+			</div>
+
+		</section>
+		<a href="#" id="contact"></a>
+		<!-- ==============================================
+		CONTACT
+		=============================================== -->		
+		<%= render file: 'public/templetes/meetiao/_footer.html' %>		
