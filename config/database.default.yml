@@ -5,10 +5,10 @@ base: &base
   wait_timeout: 600
   pool: 25
   username: root
-  password: password
-  host: 127.0.0.1
+  password: 1234
+  host: localhost
   port: 3306
-  database: raincms
+  database: meetiao
 
 development:
   <<: *base

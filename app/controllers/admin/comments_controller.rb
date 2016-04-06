@@ -29,10 +29,10 @@ class Admin::CommentsController < Admin::ApplicationController
 
     respond_to do |format|
       if @admin_comment.save
-        format.html { redirect_to admin_comments_path, notice: '添加成功.' }
+        format.html { redirect_to request.referer, notice: '添加成功.' }
         format.json { render action: 'show', status: :created, location: @admin_comment }
       else
-        format.html { render action: 'new' }
+        format.html { render request.referer ,notice: '添加失败.'}
         format.json { render json: @admin_comment.errors, status: :unprocessable_entity }
       end
     end

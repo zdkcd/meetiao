@@ -16,10 +16,10 @@ class CommentsController < ApplicationController
     respond_to do |format|
       @comment.status = '未处理'
       if @comment.save
-        format.html { redirect_to "/", notice: '预订成功.' }
+        format.html { redirect_to request.referer , notice: '提交成功' }
         format.json { render action: 'show', status: :created, location: @comment }
       else
-        format.html { render action: 'new' }
+        format.html { redirect_to request.referer, notice: '提交失败'}
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end

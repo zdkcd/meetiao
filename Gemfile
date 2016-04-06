@@ -13,7 +13,7 @@ gem 'font-awesome-rails', '4.3.0.0'
 gem 'cancan', '1.6.10'
 gem 'devise', '3.4.1'
 gem 'figaro', '1.1.0'
-gem 'mysql2', '0.3.13'
+gem 'mysql2', '0.3.18'
 gem 'rolify', '4.0.0'
 gem 'simple_form', '3.1.0'
 gem 'acts-as-taggable-on', '3.5.0'
@@ -21,7 +21,10 @@ gem 'sitemap_generator', '5.0.5'
 gem 'whenever', :require => false
 # For linux
 gem 'therubyracer', :platform=>:ruby
+gem 'slim-rails'
 
+#gem 'execjs'
+#gem 'coffee-script-source', '1.8.0'
 #page caching
 # http://www.rubytutorial.io/page-caching-with-rails-4
 gem 'actionpack-page_caching'
@@ -71,7 +74,7 @@ gem 'chinese_pinyin'
 group :development do
   gem 'pry'
   gem 'pry-byebug'
-  gem 'better_errors'
+  
   gem 'web-console', '~> 2.0'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
@@ -89,3 +92,5 @@ group :test do
   gem 'database_cleaner', '1.0.1'
   gem 'email_spec'
 end
+gem 'tzinfo-data',platforms:[:mingw, :mswin, :x64_mingw]
+#gem 'iconv', '~> 1.0.3'
